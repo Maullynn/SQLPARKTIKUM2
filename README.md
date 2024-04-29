@@ -144,6 +144,10 @@ MariaDB [latihan3]> INSERT INTO Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, 
     -> (11223349, 'anton sinaga', 'Laki-laki', '1988-03-10', '', 'Cikarang', '', '', '');
 ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`latihan3`.`mahasiswa`, CONSTRAINT `mahasiswa_ibfk_1` FOREIGN KEY (`kd_ds`) REFERENCES `dosen` (`kd_ds`))
 ```
+```
+CARA FIX NYA
+SET FOREIGN_KEY_CHECKS=0;
+```
 
 **2. Menampilkan semua isi/record pada tabel bisa menggunakan kode berikut :**
 
