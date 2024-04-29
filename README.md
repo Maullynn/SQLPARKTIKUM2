@@ -134,6 +134,16 @@ insert into Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos
 -> (11223348,"tiara wahidah","perempuan","1980-02-05","","Bekasi","","",""), 
 -> (11223349,"anton sinaga","laki-laki","1988-03-10","","Cikarang","","","");
 ```
+```
+MariaDB [latihan3]> INSERT INTO Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds) VALUES
+    -> (11223344, 'ari santoso', 'Laki-laki', '1998-10-12', '', 'Bekasi', '', '', ''),
+    -> (11223345, 'ario talib', 'Laki-laki', '1999-11-16', '', 'Cikarang', '', '', ''),
+    -> (11223346, 'dina marlina', 'Perempuan', '1997-12-01', '', 'Karawang', '', '', ''),
+    -> (11223347, 'lisa ayu', 'Perempuan', '1996-01-02', '', 'Bekasi', '', '', ''),
+    -> (11223348, 'tiara wahidah', 'Perempuan', '1980-02-05', '', 'Bekasi', '', '', ''),
+    -> (11223349, 'anton sinaga', 'Laki-laki', '1988-03-10', '', 'Cikarang', '', '', '');
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`latihan3`.`mahasiswa`, CONSTRAINT `mahasiswa_ibfk_1` FOREIGN KEY (`kd_ds`) REFERENCES `dosen` (`kd_ds`))
+```
 
 **2. Menampilkan semua isi/record pada tabel bisa menggunakan kode berikut :**
 
